@@ -1,0 +1,161 @@
+:root {
+  --maincolor: #0090f0;
+  --p_color: #7b7b7b;
+  --bg_color: #f3f3f3;
+  ---white_color: #fff;
+  ---color_heading: #253237;
+  --border_color: #d6d6d6d5;
+}
+.item-details {
+  padding: 50px 0;
+}
+.item-details .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-details .imges-item {
+  width: 40%;
+}
+.item-details .imges-item .big-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.item-details .imges-item .big-img img {
+  max-height: 450px;
+  width: auto;
+}
+.item-details .imges-item .sm-img {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.item-details .imges-item .sm-img img {
+  width: 24%;
+}
+.item-details .detalis-item {
+  width: 50%;
+}
+.item-details .details-item .name {
+  margin-bottom: 30px;
+  color: var(--maincolor);
+}
+.item-details .details-item .stars {
+  margin: 15px 0;
+  display: flex;
+  gap: 5px;
+}
+
+.item-details .details-item .stars svg {
+  fill: #f8d941;
+  font-size: 20px;
+}
+.item-details .details-item .price {
+  font-size: 22px;
+  margin: 20px 0;
+}
+.item-details .details-item h5 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.item-details .details-item .desc {
+  line-height: 1.5;
+}
+.item-details .details-item .stock {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.item-details .details-item .btn {
+  font-size: 16px;
+  border-radius: 2px;
+  padding: 12px 15px;
+  border: 1px solid var(--maincolor);
+  transition: 0.3s ease-in-out;
+}
+.item-details .details-item .btn.in-cart{
+  background: transparent;
+  color: var(--maincolor);
+  pointer-events: none;
+}
+.item-details .details-item .icons span.in-favorites {
+  background: var(--maincolor) !important;
+}
+
+.item-details .details-item .icons span.in-favorites svg {
+  fill: var(---white_color) ;
+}
+
+.item-details .details-item .icons {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+  margin: 20px 0;
+}
+
+.item-details .details-item .icons span {
+  width: 40px;
+  height: 40px;
+  background: var(--bg_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.item-details .details-item .icons span:hover {
+  background: var(--maincolor);
+}
+.item-details .details-item .icons svg:hover {
+  fill: var(---white_color);
+  transition: 0.5s;
+}
+
+.skeleton-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.skeleton-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.skeleton-img {
+  height: 150px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-text {
+  height: 15px;
+  background: #e0e0e0;
+  margin-top: 10px;
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

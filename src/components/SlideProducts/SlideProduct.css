@@ -1,0 +1,330 @@
+
+:root{
+    --maincolor: #0090f0;
+    --p_color: #7b7b7b;
+    --bg_color: #f3f3f3;
+    ---white_color: #fff;
+    ---color_heading: #253237;
+    --border_color: #d6d6d6d5;
+ 
+ }
+.slide-products {
+    padding: 50px 0;
+}
+
+.top-slide {
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border_color);
+    padding: 15px 20px 20px 0;
+}
+.top-slide::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 100px;
+    height: 2px;
+    background: var(--maincolor);
+}
+.top-slide h2{
+    font-size: 30px;
+    color: var(--maincolor);
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* product */
+
+.product {
+    width: 250px;
+    background: var(---white_color);
+    padding: 25px 15px;
+    border: 1px solid var(--border_color);
+    transition: 0.3s;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.product:hover{
+    border-color: var(--maincolor);
+    box-shadow: 10px 10px 15px #94949429;
+}
+.product .img-product {
+    position: relative;
+    height: 180px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.product .img-product img{
+    height: 160px;
+    width: auto;
+}
+.product .name-product {
+    margin-bottom: 10px;
+    color: var(---color_heading);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.product .stars{
+    margin: 15px 0;
+    display: flex;
+    gap: 5px;
+}
+.product .stars svg{
+    fill: #f8d941;
+    font-size: 18px;
+}
+.product .price{
+    font-weight: bold;
+    font-size: 20px;
+}
+.product .icons{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    right: -50px;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+.product:hover .icons{
+    right: 20px;
+    transition: 0.3s;
+}
+.product .icons span{
+    width: 40px;
+    height: 40px;
+    background: var(--bg_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.product .icons span.in-favorites{
+  background: var(--maincolor);
+}
+.product .icons span.in-favorites svg{
+  fill: var(---white_color);
+}
+.product.in-cart .icons .btn-add-cart {
+    background: var(--maincolor);
+    pointer-events: none;
+}
+.product.in-cart .icons .btn-add-cart svg {
+    fill: var(---white_color);
+}
+.product .stats-cart {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 13px;
+    transition: 0.3s;
+    align-items: center;
+    gap: 5px;
+    color: #253237;
+}
+.product.in-cart .stats-cart{
+    top: 10px;
+}
+.product .stats-cart svg{
+    color: rgb(44, 252, 3);
+}
+
+
+/* ==========================================
+   MEDIA QUERIES - ADD THIS AT THE END OF YOUR FILE
+   ========================================== */
+
+/* للشاشات المتوسطة (تابلت) */
+@media (max-width: 992px) {
+    .slide-products {
+      padding: 30px 0;
+    }
+  
+    .top-slide h2 {
+      font-size: 26px;
+    }
+  
+    .product {
+      width: 220px;
+      padding: 20px 12px;
+    }
+  
+    .product .img-product {
+      height: 150px;
+      padding: 0 15px;
+    }
+  
+    .product .img-product img {
+      height: 130px;
+    }
+  
+    .product .price {
+      font-size: 18px;
+    }
+  
+    .product .icons span {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  /* للشاشات الصغيرة (جوال) */
+  @media (max-width: 768px) {
+    .slide-products {
+      padding: 20px 0;
+    }
+  
+    .top-slide {
+      padding: 10px 10px 15px 0;
+      margin-bottom: 15px;
+    }
+  
+    .top-slide h2 {
+      font-size: 20px;
+    }
+  
+    .top-slide p {
+      font-size: 13px;
+    }
+  
+    .product {
+      width: 100%;
+      max-width: 180px;
+      padding: 12px 8px;
+      margin: 0 auto;
+    }
+  
+    .product .img-product {
+      height: 120px;
+      padding: 0 10px;
+      margin-bottom: 15px;
+    }
+  
+    .product .img-product img {
+      height: 100px;
+    }
+  
+    .product .name-product {
+      font-size: 13px;
+    }
+  
+    .product .stars {
+      margin: 8px 0;
+    }
+  
+    .product .stars svg {
+      font-size: 14px;
+    }
+  
+    .product .price {
+      font-size: 15px;
+    }
+  
+    .product .icons {
+      gap: 6px;
+    }
+  
+    .product:hover .icons {
+      right: 10px;
+    }
+  
+    .product .icons span {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .product .icons span svg {
+      font-size: 14px;
+    }
+  
+    .product .stats-cart {
+      font-size: 11px;
+    }
+  
+    /* Swiper ضبط */
+    .products-swiper .swiper-slide {
+      padding: 4px !important;
+    }
+  
+    .products-swiper .swiper-button-next,
+    .products-swiper .swiper-button-prev {
+      display: none !important;
+    }
+  }
+  
+  /* للجوالات الصغيرة جداً */
+  @media (max-width: 480px) {
+    .slide-products {
+      padding: 15px 0;
+    }
+  
+    .top-slide h2 {
+      font-size: 17px;
+    }
+  
+    .top-slide p {
+      font-size: 11px;
+    }
+  
+    .product {
+      max-width: 150px;
+      padding: 8px 6px;
+    }
+  
+    .product .img-product {
+      height: 90px;
+      padding: 0 5px;
+    }
+  
+    .product .img-product img {
+      height: 75px;
+    }
+  
+    .product .name-product {
+      font-size: 11px;
+    }
+  
+    .product .stars svg {
+      font-size: 11px;
+    }
+  
+    .product .price {
+      font-size: 13px;
+    }
+  
+    .product .icons span {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .product .icons span svg {
+      font-size: 11px;
+    }
+  
+    .product .stats-cart {
+      font-size: 9px;
+    }
+  
+    .product .stats-cart svg {
+      width: 12px;
+      height: 12px;
+    }
+  
+    .product.in-cart .stats-cart {
+      top: 6px;
+    }
+  
+    .products-swiper .swiper-slide {
+      padding: 2px !important;
+    }
+  }
