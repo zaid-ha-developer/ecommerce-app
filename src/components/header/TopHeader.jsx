@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../img/WhatsApp Image 2026-07-14 at 4.56.19 AM.jpeg";
+import logo from "../../../img/wa-logo.jpeg.jpeg";
 import { FaRegHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import "./Header.css";

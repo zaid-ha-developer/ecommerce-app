@@ -1,13 +1,14 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-// import required modules
-import { Autoplay , Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 
+// ★★★ 1. استيراد الصور من مجلد img (كما فعلت في اللوجو) ★★★
+import banner1 from "../../../img/banner_Hero1.jpg";
+import banner2 from "../../../img/banner_Hero2.jpg";
+import banner3 from "../../../img/banner_Hero3.jpg";
 
 function HeroSlider() {
   return (
@@ -21,7 +22,7 @@ function HeroSlider() {
               disableOnInteraction: false,
             }}
             pagination={true}
-            modules={[Autoplay,Pagination]}
+            modules={[Autoplay, Pagination]}
             className="mySwiper"
             slidesPerView={1}
           >
@@ -36,7 +37,8 @@ function HeroSlider() {
                   Shop Now
                 </Link>
               </div>
-              <img src="/src/img/banner_Hero1.jpg" alt="slider hero 1" />
+              {/* ★★★ 2. استخدام الصور المستوردة هنا (مثل {banner1}) ★★★ */}
+              <img src={banner1} alt="slider hero 1" />
             </SwiperSlide>
             <SwiperSlide>
               <div className="content">
@@ -49,20 +51,20 @@ function HeroSlider() {
                   Shop Now
                 </Link>
               </div>
-              <img src="/src/img/banner_Hero2.jpg" alt="slider hero 1" />
+              <img src={banner2} alt="slider hero 1" />
             </SwiperSlide>
             <SwiperSlide>
               <div className="content">
                 <h4>NEW ARRIVAL</h4>
                 <h3>
-                 Xiaomi Air 75 <br /> Earbuds
+                  Xiaomi Air 75 <br /> Earbuds
                 </h3>
                 <p>AAC HD Sound Quality</p>
                 <Link to="/" className="btn">
                   Shop Now
                 </Link>
               </div>
-              <img src="/src/img/banner_Hero3.jpg" alt="slider hero 1" />
+              <img src={banner3} alt="slider hero 1" />
             </SwiperSlide>
           </Swiper>
         </div>
