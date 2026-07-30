@@ -22,9 +22,19 @@ body {
   font-family: "Inter", sans-serif;
   padding-top: 150px;
 }
-/* حل مشكلة ظهور المحتوى تحت شريط الآيفون */
-header, .top-header, .header {
-  padding-top: env(safe-area-inset-top) !important;
+/* حل مشكلة شريط عنوان الآيفون ومنطقة النوتش (Dynamic Island) */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@supports (padding: max(0px)) {
+  body {
+    padding-left: min(0px, env(safe-area-inset-left));
+    padding-right: min(0px, env(safe-area-inset-right));
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 img {
   width: 100%;
