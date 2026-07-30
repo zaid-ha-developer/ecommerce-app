@@ -22,6 +22,10 @@ body {
   font-family: "Inter", sans-serif;
   padding-top: 150px;
 }
+/* حل مشكلة ظهور المحتوى تحت شريط الآيفون */
+header, .top-header, .header {
+  padding-top: env(safe-area-inset-top) !important;
+}
 img {
   width: 100%;
 }
