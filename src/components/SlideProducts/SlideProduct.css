@@ -255,7 +255,8 @@
     .products-swiper .swiper-slide {
       padding: 4px !important;
     }
-  
+    
+
     .products-swiper .swiper-button-next,
     .products-swiper .swiper-button-prev {
       display: none !important;
@@ -328,3 +329,15 @@
       padding: 2px !important;
     }
   }
+  /* إضافة مسافة للبطاقات في الشاشات الكبيرة لتفكيك الزحمة */
+@media (min-width: 769px) {
+  .products-swiper .swiper-slide {
+    padding: 12px !important;
+  }
+  
+  /* إذا شفت إن الصور لسه قريبة، زود الرقم 12 إلى 15 أو 20 */
+  .products-swiper .swiper-slide > div {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 10px;
+  }
+}

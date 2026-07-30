@@ -24,7 +24,8 @@ function SlideProduct({ title, data }) {
           navigation={true}
           modules={[Navigation, Autoplay]}
           className="products-swiper"
-          slidesPerView={3}
+          // حطينا مسافة عامة للموبايل، والباقي بتاخده الـ breakpoints
+          spaceBetween={10}
           breakpoints={{
             320: {
               slidesPerView: 2,
@@ -43,12 +44,12 @@ function SlideProduct({ title, data }) {
               spaceBetween: 15,
             },
             1024: {
-              slidesPerView: 5,
-              spaceBetween: 20,
+              slidesPerView: 4, // ★ قللنا العرض عشان الصور ما تصير صغيرة جداً
+              spaceBetween: 25,
             },
             1280: {
-              slidesPerView: 6,
-              spaceBetween: 25,
+              slidesPerView: 5, // ★ بدل 6 خليها 5 عشان تعطي تنفس للشاشة
+              spaceBetween: 35, // ★ زودنا المسافة بينهم
             },
           }}
         >
