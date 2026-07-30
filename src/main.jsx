@@ -4,16 +4,16 @@ import './index.css'
 import App from './App.jsx'
 import React from 'react'
 import ReactDom from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+// ★★★ أهم تغيير: استخدم HashRouter بدلاً من BrowserRouter ★★★
+import { HashRouter } from 'react-router-dom' 
 import CardProvider from './components/context/CartContext'
 
-// لاحظ التغيير هنا: basename أصبح يطابق الـ base في vite.config.js
 ReactDom.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/ecommerce-app">
+    <HashRouter> 
       <CardProvider>
         <App />
       </CardProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 )

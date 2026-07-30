@@ -5,11 +5,6 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 
-// ★★★ 1. استيراد الصور من مجلد img (كما فعلت في اللوجو) ★★★
-import banner1 from "../../../img/banner_Hero1.jpg";
-import banner2 from "../../../img/banner_Hero2.jpg";
-import banner3 from "../../../img/banner_Hero3.jpg";
-
 function HeroSlider() {
   return (
     <>
@@ -37,8 +32,8 @@ function HeroSlider() {
                   Shop Now
                 </Link>
               </div>
-              {/* ★★★ 2. استخدام الصور المستوردة هنا (مثل {banner1}) ★★★ */}
-              <img src={banner1} alt="slider hero 1" />
+              {/* ★★★ غير المسار إلى /img/banner_Hero1.jpg ★★★ */}
+              <img src="img/banner_Hero1-v2.jpg" alt="slider hero 1" />
             </SwiperSlide>
             <SwiperSlide>
               <div className="content">
@@ -51,7 +46,7 @@ function HeroSlider() {
                   Shop Now
                 </Link>
               </div>
-              <img src={banner2} alt="slider hero 1" />
+              <img src="img/banner_Hero2-v2.jpg" alt="slider hero 1" />
             </SwiperSlide>
             <SwiperSlide>
               <div className="content">
@@ -64,7 +59,7 @@ function HeroSlider() {
                   Shop Now
                 </Link>
               </div>
-              <img src={banner3} alt="slider hero 1" />
+              <img src="img/banner_Hero3-v2.jpg" alt="slider hero 1" />
             </SwiperSlide>
           </Swiper>
         </div>

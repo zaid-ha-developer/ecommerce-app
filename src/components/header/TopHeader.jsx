@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../img/wa-logo.jpeg.jpeg";
 import { FaRegHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import "./Header.css";
@@ -13,8 +12,9 @@ function TopHeader() {
     <div className="top-header">
       <div className="container">
         <Link to="/">
+          {/* ★ تم تغيير src ليصبح /img/zaid-logo.png ★ */}
           <img
-            src={logo}
+            src="img/zaid-logo-v2.png" 
             alt="Logo"
             style={{ width: "160px", height: "auto" }}
             className="logo"

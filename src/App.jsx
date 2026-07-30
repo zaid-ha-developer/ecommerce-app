@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom"; // ★ أضفنا Navigate هنا
 import BtmHeader from "./components/header/BtmHeader";
 import TopHeader from "./components/header/TopHeader";
 import Home from "./page/home/Home";
@@ -40,6 +40,11 @@ function App() {
         <ScrollToTop />
         <AnimatePresence mode="wait">
           <Routes>
+            
+          <Route path="*" element={<Navigate to="/" replace />} />
+            {/* ★ هذا السطر الجديد يحل مشكلة عدم الذهاب للصفحة الرئيسية ★ */}
+            <Route path="/ecommerce-app" element={<Navigate to="/" replace />} />
+
             <Route path="/About" element={<About />} />
             <Route path="/Accessories" element={<Accessories />} />
             <Route path="/Blog" element={<Blog />} />
