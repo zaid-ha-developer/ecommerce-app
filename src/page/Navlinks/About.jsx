@@ -16,17 +16,25 @@ function About() {
               Our mission is to deliver quality and value with every purchase.
               We believe in building long-term relationships with our community.
             </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', marginTop: '40px' }}>
-              <div>
-                <h3 style={{ color: 'var(--maincolor)', fontSize: '40px' }}>500+</h3>
+            
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'center', 
+              alignItems: 'center',
+              flexWrap: 'wrap', // ★ السطر السحري: يجبر الأعمدة على النزول للأسفل إذا ضاقت الشاشة
+              gap: '20px', // ★ قللنا المسافة لتصبح مناسبة للجوال
+              marginTop: '40px' 
+            }}>
+              <div style={{ minWidth: '120px', marginBottom: '15px' }}>
+                <h3 style={{ color: 'var(--maincolor)', fontSize: '32px' }}>500+</h3>
                 <p>Happy Customers</p>
               </div>
-              <div>
-                <h3 style={{ color: 'var(--maincolor)', fontSize: '40px' }}>1000+</h3>
+              <div style={{ minWidth: '120px', marginBottom: '15px' }}>
+                <h3 style={{ color: 'var(--maincolor)', fontSize: '32px' }}>1000+</h3>
                 <p>Products</p>
               </div>
-              <div>
-                <h3 style={{ color: 'var(--maincolor)', fontSize: '40px' }}>4.9⭐</h3>
+              <div style={{ minWidth: '120px', marginBottom: '15px' }}>
+                <h3 style={{ color: 'var(--maincolor)', fontSize: '32px' }}>4.9⭐</h3>
                 <p>Average Rating</p>
               </div>
             </div>
